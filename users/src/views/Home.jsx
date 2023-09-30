@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="min-h-screen px-24">
+        <section className="h-screen px-24">
           <header>
             <h2 className="text-4xl font-semibold text-center w-fit m-auto">
               <span data-aos="fade-right" data-aos-duration={2000}  className="text-primary">{"[ "}</span>
@@ -80,7 +80,20 @@ export default function Home() {
             </p>
           </article>
         </section>
-        <footer></footer>
+        <footer className="mt-24 px-12 py-8  flex justify-around bg-slate-100">
+          <div>
+            <h6 className="font-bold">Contacto</h6>
+            <ul>
+              <li>contact@savaldev.com</li>
+            </ul>
+          </div>
+
+          <div>
+            <p>
+              Savaldev &copy; 2023
+            </p>
+          </div>
+        </footer>
       </>
     );
   }
