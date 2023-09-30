@@ -8,7 +8,7 @@ function Navigation() {
   const [darkMode, setDarkMode] = useState(false);
     const [leftNav, setLeftNav] = useState(false);
   return (
-    <nav className=" w-screen bg-white dark:bg-gray-900 fixed flex items-center justify-between px-4 md:px-16 py-4">
+    <nav className="z-50 w-screen bg-white dark:bg-gray-900 fixed flex items-center justify-between px-4 md:px-16 py-4">
       <div className="flex  items-center gap-4">
         <FontAwesomeIcon
             onClick={() => setLeftNav(!leftNav)}
