@@ -49,16 +49,16 @@ export default function Home() {
               url={"speedtechcr.com"}
             />
             <ProyectCard
-              projectKey="AC"
-              name="AC Importadora"
-              url={"en desarrollo"}
+              projectKey="CQD"
+              name="Contador Que Declaro"
+              url={"contadorquedeclaro.com"}
             />
           </div>
         </section>
 
-        <section className="h-screen px-24">
+        <section className="h-screen mt-24 px-8 md:px-24">
           <header>
-            <h2 className="text-4xl font-semibold text-center w-fit m-auto">
+            <h2 className=" text-3xl md:text-4xl font-semibold text-center w-fit m-auto">
               <span data-aos="fade-right" data-aos-duration={2000}  className="text-primary">{"[ "}</span>
               Sobre Nosotros
               <span data-aos="fade-left" data-aos-duration={2000}  className="text-primary">{" ]"}</span>
@@ -80,18 +80,18 @@ export default function Home() {
             </p>
           </article>
         </section>
-        <footer className="mt-24 px-12 py-8  flex justify-around bg-slate-100">
+        <footer className="mt-24 px-12 py-8  flex items-center justify-around bg-slate-100">
           <div>
-            <h6 className="font-bold">Contacto</h6>
+            <h6 className="font-semibold text-sm ">Contacto</h6>
             <ul>
-              <li>contact@savaldev.com</li>
+              <li className="text-gray-500 text-xs">contact@savaldev.com</li>
             </ul>
           </div>
 
           <div>
-            <p>
+            <span className="text-gray-500 text-xs">
               Savaldev &copy; 2023
-            </p>
+            </span>
           </div>
         </footer>
       </>
