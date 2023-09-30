@@ -56,7 +56,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-screen mt-24 px-8 md:px-24">
+        <section id="about" className="h-screen py-24 px-8 md:px-24">
           <header>
             <h2 className=" text-3xl md:text-4xl font-semibold text-center w-fit m-auto">
               <span data-aos="fade-right" data-aos-duration={2000}  className="text-primary">{"[ "}</span>

@@ -1,11 +1,11 @@
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+//import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 function Navigation() {
-  const [darkMode, setDarkMode] = useState(false);
+  //const [darkMode, setDarkMode] = useState(false);
     const [leftNav, setLeftNav] = useState(false);
   return (
     <nav className="z-50 w-screen bg-white dark:bg-gray-900 fixed flex items-center justify-between px-4 md:px-16 py-4">
@@ -22,19 +22,16 @@ function Navigation() {
 
       <ul className="hidden gap-8  text-gray-600  md:flex  ">
         <li>
-          <Link to="/">Inicio</Link>
+          <a href="/#inicio">Inicio</a>
         </li>
         <li>
-          <Link to="/#proyectos">Proyectos</Link>
+          <a href="/#proyectos">Proyectos</a>
         </li>
         <li>
-          <Link to="/#tecnologías">Tecnologías</Link>
-        </li>
-        <li>
-          <Link to="/#about">Sobre nosotros</Link>
+          <a href="/#about">Sobre nosotros</a>
         </li>
       </ul>
-      <button
+      {/* <button
         className="focus:outline-none min-w-[50px] text-gray-600"
         onClick={() => {
           document.body.classList.toggle("dark");
@@ -46,7 +43,7 @@ function Navigation() {
         ) : (
           <FontAwesomeIcon icon={faSun} />
         )}
-      </button>
+      </button> */}
 
       <ul className={`absolute  flex-col gap-5 pt-4 top-0 left-0 h-screen px-4 shadow-lg w-1/2  bg-white  md:hidden text-gray-600 dark:bg-gray-900  ${leftNav ? "flex" : "hidden"}`}>
       <li className="flex gap-4 items-center">
@@ -59,17 +56,14 @@ function Navigation() {
           Savaldev
         </h6>
         </li>
-        <li>
-          <Link to="/">Inicio</Link>
+        <li onClick={() => setLeftNav(!leftNav)}>
+          <a href="/#inicio">Inicio</a>
         </li>
-        <li>
-          <Link to="/#proyectos">Proyectos</Link>
+        <li onClick={() => setLeftNav(!leftNav)}>
+          <a href="/#proyectos">Proyectos</a>
         </li>
-        <li>
-          <Link to="/#tecnologías">Tecnologías</Link>
-        </li>
-        <li>
-          <Link to="/#about">Sobre nosotros</Link>
+        <li  onClick={() => setLeftNav(!leftNav)}>
+          <a href="/#about">Sobre nosotros</a>
         </li>
       </ul>
     </nav>
