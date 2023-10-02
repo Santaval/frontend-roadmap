@@ -2,16 +2,16 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   //const [darkMode, setDarkMode] = useState(false);
-    const [leftNav, setLeftNav] = useState(false);
+  const [leftNav, setLeftNav] = useState(false);
   return (
     <nav className="z-50 w-screen bg-white dark:bg-gray-900 fixed flex items-center justify-between px-4 md:px-16 py-4">
       <div className="flex  items-center gap-4">
         <FontAwesomeIcon
-            onClick={() => setLeftNav(!leftNav)}
+          onClick={() => setLeftNav(!leftNav)}
           className="text-2xl text-primary md:hidden   cursor-pointer"
           icon={faBars}
         />
@@ -45,16 +45,29 @@ function Navigation() {
         )}
       </button> */}
 
-      <ul className={`absolute  flex-col gap-5 pt-4 top-0 left-0 h-screen px-4 shadow-lg w-1/2  bg-white  md:hidden text-gray-600 dark:bg-gray-900  ${leftNav ? "flex" : "hidden"}`}>
-      <li className="flex gap-4 items-center">
-      <FontAwesomeIcon
-      onClick={() => setLeftNav(!leftNav)}
-          className="text-2xl text-primary md:hidden   cursor-pointer"
-          icon={faBars}
-        />
-        <h6 className="text-2xl  text-gray-600 dark:text-white  bold">
-          Savaldev
-        </h6>
+      <div>
+        <Link
+          className="bg-primary text-white px-4 py-2 rounded-md"
+          to="/login"
+        >
+          Iniciar sesión
+        </Link>
+      </div>
+
+      <ul
+        className={`absolute  flex-col gap-5 pt-4 top-0 left-0 h-screen px-4 shadow-lg w-1/2  bg-white  md:hidden text-gray-600 dark:bg-gray-900  ${
+          leftNav ? "flex" : "hidden"
+        }`}
+      >
+        <li className="flex gap-4 items-center">
+          <FontAwesomeIcon
+            onClick={() => setLeftNav(!leftNav)}
+            className="text-2xl text-primary md:hidden   cursor-pointer"
+            icon={faBars}
+          />
+          <h6 className="text-2xl  text-gray-600 dark:text-white  bold">
+            Savaldev
+          </h6>
         </li>
         <li onClick={() => setLeftNav(!leftNav)}>
           <a href="/#inicio">Inicio</a>
@@ -62,7 +75,7 @@ function Navigation() {
         <li onClick={() => setLeftNav(!leftNav)}>
           <a href="/#proyectos">Proyectos</a>
         </li>
-        <li  onClick={() => setLeftNav(!leftNav)}>
+        <li onClick={() => setLeftNav(!leftNav)}>
           <a href="/#about">Sobre nosotros</a>
         </li>
       </ul>
