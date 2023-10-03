@@ -5,6 +5,7 @@ import Login from "./views/Login";
 import { NextUIProvider } from "@nextui-org/react";
 import Footer from "./components/Footer";
 import Projects from "./views/Projects";
+import Project from "./views/Project";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/project/:key" element={<Project />} />
             </Routes>
           </main>
 
