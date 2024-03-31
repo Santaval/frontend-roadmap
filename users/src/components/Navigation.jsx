@@ -2,7 +2,7 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Navigation() {
   //const [darkMode, setDarkMode] = useState(false);
@@ -46,12 +46,12 @@ function Navigation() {
       </button> */}
 
       <div>
-        <Link
+        {/* <Link
           className="text-primary font-medium"
           to="/login"
         >
           Iniciar sesión
-        </Link>
+        </Link> */}
       </div>
 
       <ul
