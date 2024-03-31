@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Projects from "./views/Projects";
 import Project from "./views/Project";
 import ApiDocs from "./views/ApiDocs";
+import Hosting from "./views/Hosting";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/hosting" element={<Hosting />} />
               <Route path="/login" element={<Login />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/project/:key" element={<Project />} />
